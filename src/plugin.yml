@@ -1,0 +1,9 @@
+name: SharpUHCHost
+author: Sithey
+version: 1.0
+main: fr.sharpheberg.sharpuhchost.Main
+description: UHC Plugin development tutorial
+website: https://www.sharpheberg.com
+commands:
+    start:
+        description: Start the game
