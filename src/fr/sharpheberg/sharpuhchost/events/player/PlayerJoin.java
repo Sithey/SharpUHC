@@ -1,5 +1,7 @@
 package fr.sharpheberg.sharpuhchost.events.player;
 
+import fr.sharpheberg.sharpuhchost.config.message.Messages;
+import org.apache.commons.lang3.tuple.Pair;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -15,7 +17,7 @@ public class PlayerJoin implements Listener {
 
         Player player = event.getPlayer();
 
-        Bukkit.broadcastMessage("§e" + player.getName() + " §7a rejoint la partie !");
+        Messages.Message.PLAYER_JOIN.broadcastMessage(Pair.of("player", player.getName()));
 
         player.teleport(player.getWorld().getSpawnLocation());
     }

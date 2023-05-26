@@ -1,6 +1,8 @@
 package fr.sharpheberg.sharpuhchost;
 
 import fr.sharpheberg.sharpuhchost.commands.CommandManager;
+import fr.sharpheberg.sharpuhchost.config.message.Messages;
+import fr.sharpheberg.sharpuhchost.config.settings.Settings;
 import fr.sharpheberg.sharpuhchost.events.EventManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -17,6 +19,8 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         EventManager.load();
         CommandManager.load();
+        Settings.setup();
+        Messages.setup();
     }
 
     @Override
